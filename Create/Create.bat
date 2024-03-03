@@ -1,24 +1,23 @@
-@echo off
+#!/bin/bash
 
-rem Crear un archivo de texto llamado mytext.txt y agregar la cadena "Hola Mundo"
-echo Hola Mundo > mytext.txt
+# Crear un archivo de texto llamado mytext.txt y agregar la cadena "Hola Mundo"
+echo "Hola Mundo" > mytext.txt
 
-rem Imprimir el contenido del archivo mytext.txt en la terminal
-type mytext.txt
+# Imprimir el contenido del archivo mytext.txt en la terminal
+cat mytext.txt
 
-rem Crear un subdirectorio llamado backup
+# Crear un subdirectorio llamado backup
 mkdir backup
 
-rem Mover el archivo mytext.txt al subdirectorio backup
-move mytext.txt backup\
+# Mover el archivo mytext.txt al subdirectorio backup
+mv mytext.txt backup/
 
-rem Listar el contenido del subdirectorio backup
-dir backup
+# Listar el contenido del subdirectorio backup
+ls backup
 
-rem Eliminar el archivo mytext.txt del subdirectorio backup
-del backup\mytext.txt
+# Eliminar el archivo mytext.txt del subdirectorio backup
+rm backup/mytext.txt
 
-rem Eliminar el subdirectorio backup
-rmdir backup /s /q
-
+# Eliminar el subdirectorio backup
+rmdir backup
 
